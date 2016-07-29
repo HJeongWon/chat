@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Main</title>
+    <script type="text/javascript" charset="utf-8">
+    </script>
+   
+</head>
+<body>
+    Rooms:
+    <ul>
+        {% for room in rooms %}
+        <li><a href="/{{room}}/{{uid}}">{{room}}</a></li>
+        {% endfor %}
+    </ul>
+    <form   action="/create/{{uid}}" method="POST">
+    <input name="roomName"></input>
+    <input type="submit" />
+    </form>
+</body>
+</html>
